@@ -1,6 +1,8 @@
 body, html{
     background-image: radial-gradient(rgb(190, 147, 91), white, rgb(190, 147, 91));
     margin:0px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1{
@@ -21,7 +23,7 @@ h1{
 .header{
     position: sticky;
     height: 50px;
-    background-color: rgba(223, 116, 55, 0.925);
+    background-color: rgba(223, 116, 55, 1);
     margin: 50px 0px 5px 0px;
     display: flex;
     align-items: center;
@@ -41,6 +43,15 @@ h1{
     margin-right: 20px;
 }
 
+.header button{
+    background-color: rgba(223, 116, 55, 1);
+    border: none;
+    font-size: 29px;
+    color: black;
+    font-weight: 600;
+    padding:8px;
+}
+
 .logoDiv{
     height:105px;
     width:105px;
@@ -50,7 +61,7 @@ h1{
     justify-content: center;
     margin-left: 60px;
     margin-top: -85px;
-    background-color: rgba(223, 116, 55, 0.925);
+    background-color: rgba(223, 116, 55, 1);
     border-radius: 50%;
     border:2px solid;
     border-color: black;
@@ -80,8 +91,9 @@ h1{
     text-align: center;
 }
 
-.mainImgDiv{
-    display: flex;
+.mainDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
 }
@@ -104,4 +116,36 @@ h1{
 .footer{
     height:30px;
     background-color: rgba(223, 116, 55, 0.925);
+}
+
+.itemDiv{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    border-color: rgba(223, 116, 55, 0.925);
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.itemDiv>img{
+    height:300px;
+    width:400px;
+    margin: 5px;
+}
+
+.detailsDiv{
+    margin: 5px;
+    font-size: 20px;
+}
+
+.price{
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+h2{
+    margin-top: 5px;
+    font-style: italic;
 }

@@ -10,19 +10,17 @@ function LoadHeader(){
 
     const tabsList=document.createElement('ul');
    
-    const homeTab=document.createElement('li');
-    homeTab.textContent="Home";
-   
-    const menuTab=document.createElement('li');
-    menuTab.textContent="Menu";
+    let tabsMenu=["Home", "Menu", "Contact"]
+
+    for(let i=0; i<tabsMenu.length; i++){
+        const tab=document.createElement('li');
+        const tabBtn=document.createElement('button');
+        tabBtn.textContent=`${tabsMenu[i]}`;
+
+        tab.appendChild(tabBtn);
+        tabsList.appendChild(tab);
+    }
     
-    const contactTab=document.createElement('li');
-    contactTab.textContent="Contact";
-
-    tabsList.appendChild(homeTab);
-    tabsList.appendChild(menuTab);
-    tabsList.appendChild(contactTab);
-
     header.appendChild(tabsList);
 
     main.appendChild(header);
@@ -40,9 +38,9 @@ function LoadLogo(){
     main.appendChild(logoDiv);
 }
 
-function LoadMainImg(){
-    const mainImgDiv=document.createElement('div');
-    mainImgDiv.classList.add('mainImgDiv');
+function LoadMainDiv(){
+    const mainDiv=document.createElement('div');
+    mainDiv.classList.add('mainDiv');
 
     const descriptionDiv=document.createElement('div');
     descriptionDiv.classList.add('descriptionDiv');
@@ -52,14 +50,14 @@ function LoadMainImg(){
    
     descriptionDiv.appendChild(description);
     
-    mainImgDiv.appendChild(descriptionDiv);
+    mainDiv.appendChild(descriptionDiv);
 
     const mainImg=document.createElement('img');
     mainImg.classList.add('mainImg');
     mainImg.setAttribute('src', './c3f5555faef4a83386b0.webp');
 
-    mainImgDiv.appendChild(mainImg);
-    main.appendChild(mainImgDiv);
+    mainDiv.appendChild(mainImg);
+    main.appendChild(mainDiv);
 
     const timetableDiv=document.createElement('div');
     timetableDiv.classList.add('timetableDiv');
@@ -73,7 +71,7 @@ function LoadMainImg(){
     timetableDiv.appendChild(timetable1);
     timetableDiv.appendChild(timetable2);
 
-    mainImgDiv.appendChild(timetableDiv);
+    mainDiv.appendChild(timetableDiv);
 }
 
 function LoadFooter(){
@@ -83,7 +81,15 @@ function LoadFooter(){
     main.appendChild(footer);
 }
 
+function LoadHomePage(){
+    LoadHeader();
+    LoadLogo();
+    LoadMainDiv();
+    LoadFooter();
+}
+
 export{LoadHeader};
 export{LoadLogo};
-export{LoadMainImg};
+export{LoadMainDiv};
 export{LoadFooter};
+export{LoadHomePage};
