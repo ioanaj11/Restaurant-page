@@ -1,0 +1,107 @@
+body, html{
+    background-image: radial-gradient(rgb(190, 147, 91), white, rgb(190, 147, 91));
+    margin:0px;
+}
+
+h1{
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    margin: 0px;
+    padding:20px;
+    margin-left: 200px;
+}
+
+#content{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    position: sticky;
+    height: 50px;
+    background-color: rgba(223, 116, 55, 0.925);
+    margin: 50px 0px 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid;
+    border-color: black;
+}
+
+.header>ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap:30px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.logoDiv{
+    height:105px;
+    width:105px;
+    position:sticky;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+    margin-top: -85px;
+    background-color: rgba(223, 116, 55, 0.925);
+    border-radius: 50%;
+    border:2px solid;
+    border-color: black;
+}
+
+.logoImg{
+    height:75px;
+    width:75px;
+}
+
+.descriptionDiv{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex:1 0;
+    margin:15px;
+}
+
+.descriptionDiv>p, .timetableDiv>p{
+    font-size:25px;
+    line-height: 2;
+    text-indent: 30px;
+    font-weight: 600;
+    font-style: italic;
+    color: rgb(124, 53, 6);
+    text-align: center;
+}
+
+.mainImgDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainImg{
+    width:1000px;
+    height: 710px;
+    margin: -20px 10px 10px 10px;
+    flex: 1 0;
+    }
+
+.timetableDiv{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+    flex:1 0;
+}
+
+.footer{
+    height:30px;
+    background-color: rgba(223, 116, 55, 0.925);
+}

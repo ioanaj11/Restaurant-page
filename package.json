@@ -1,0 +1,33 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "restaurant page",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack --config webpack.config.js --mode=development",
+    "serve": "webpack-dev-server --open"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ioanaj11/Restaurant-page.git"
+  },
+  "keywords": [
+    "restaurant",
+    "webpack",
+    "learning"
+  ],
+  "author": "Ioana J",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ioanaj11/Restaurant-page/issues"
+  },
+  "homepage": "https://github.com/ioanaj11/Restaurant-page#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
