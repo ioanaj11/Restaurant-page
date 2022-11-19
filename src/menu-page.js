@@ -1,7 +1,9 @@
 function LoadMenu(){
+    const container=document.getElementById('content');
+
     const mainDiv=document.createElement('div');
     mainDiv.classList.add('mainDiv');
-    
+
     let menu=[{
         Name: 'Sarmale',
         Description: "Romanian stuffed cabbage rolls traditionally served on Christmas and New Year's Eve but also served throughout the year at weddings, baptism parties, and other large celebrations.",
@@ -62,10 +64,18 @@ function LoadMenu(){
                 case 'Ingredients':
                 case 'Weight':
                 case 'No of calories':
-                    const detail=document.createElement('p');
-                    detail.textContent=`${prop}:  ${menu[i][prop]}`;
+                    const detailName=document.createElement('h4');
+                    detailName.textContent=`${prop}:  `;
 
-                    detailsDiv.appendChild(detail);
+                    const detailDescription=document.createElement('p');
+                    detailDescription.textContent= `${menu[i][prop]}`;
+
+                    detailsDiv.appendChild(detailName);
+                    detailsDiv.appendChild(detailDescription);
+
+                    const newline=document.createElement('br');
+                    detailsDiv.appendChild(newline);
+
                     break;
                 case 'Price':
                     const price=document.createElement('p');
@@ -81,8 +91,7 @@ function LoadMenu(){
         mainDiv.appendChild(itemDiv);
     }
 
-    const mainContainer=document.getElementById('content');
-    mainContainer.appendChild(mainDiv);
+    container.appendChild(mainDiv);
 }
 
 export {LoadMenu};

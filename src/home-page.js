@@ -46,17 +46,22 @@ function LoadMainDiv(){
     descriptionDiv.classList.add('descriptionDiv');
 
     const description=document.createElement('p');
-    description.textContent='"My wonderful restaurant" was born out of love and respect for humble deli creations, met with a desire to bring quality ingredients to the table. Simply put, we’re here to bring you an experience you can feel good about.';
+    description.textContent='"My wonderful restaurant" was born out of love and respect for traditional Romanian culinary creations, met with a desire to bring quality ingredients to the table. Simply put, we’re here to bring you an experience you can feel good about.';
    
     descriptionDiv.appendChild(description);
     
     mainDiv.appendChild(descriptionDiv);
 
+    const mainImgDiv=document.createElement('div');
+    mainImgDiv.classList.add('mainImgDiv');
+
     const mainImg=document.createElement('img');
     mainImg.classList.add('mainImg');
     mainImg.setAttribute('src', './c3f5555faef4a83386b0.webp');
 
-    mainDiv.appendChild(mainImg);
+    mainImgDiv.appendChild(mainImg);
+    mainDiv.appendChild(mainImgDiv);
+    
     main.appendChild(mainDiv);
 
     const timetableDiv=document.createElement('div');

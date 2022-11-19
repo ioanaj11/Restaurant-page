@@ -21,15 +21,15 @@ h1{
 }
 
 .header{
-    position: sticky;
     height: 50px;
-    background-color: rgba(223, 116, 55, 1);
-    margin: 50px 0px 5px 0px;
+    background-image: linear-gradient(135deg, rgb(231, 189, 155), white, rgba(223, 116, 55, 1), rgb(231, 189, 155));
+    margin: 30px 0px 5px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 2px solid;
-    border-color: black;
+    border: 3px solid;
+    border-image: linear-gradient(135deg, rgb(150, 78, 37), white, rgb(150, 78, 37), white, rgb(150, 78, 37));
+    border-image-slice:1;
 }
 
 .header>ul{
@@ -44,7 +44,7 @@ h1{
 }
 
 .header button{
-    background-color: rgba(223, 116, 55, 1);
+    background-color: rgba(223, 116, 55, 0);
     border: none;
     font-size: 29px;
     color: black;
@@ -55,16 +55,15 @@ h1{
 .logoDiv{
     height:105px;
     width:105px;
-    position:sticky;
     display:flex;
     align-items: center;
     justify-content: center;
     margin-left: 60px;
     margin-top: -85px;
-    background-color: rgba(223, 116, 55, 1);
+    background-image: linear-gradient(135deg, white, rgba(223, 116, 55, 1), rgb(224, 183, 149));
     border-radius: 50%;
-    border:2px solid;
-    border-color: black;
+    border:3px solid;
+    border-color: rgba(150, 78, 37, .5);
 }
 
 .logoImg{
@@ -87,7 +86,9 @@ h1{
     text-indent: 30px;
     font-weight: 600;
     font-style: italic;
-    color: rgb(124, 53, 6);
+    background: -webkit-linear-gradient( rgb(68, 43, 28),rgb(97, 41, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
 }
 
@@ -98,11 +99,19 @@ h1{
     justify-content: center;
 }
 
-.mainImg{
-    width:1000px;
-    height: 710px;
+.mainImgDiv{
+    box-shadow: 0px 0px 15px 15px rgb(224, 183, 149) inset;
+    padding:7px;
     margin: -20px 10px 10px 10px;
+}
+
+.mainImg{
+    width:980px;
+    height: 680px;
+    margin: 5px 5px 5px 5px;
     flex: 1 0;
+    opacity: 90%;
+    padding:7px;
     }
 
 .timetableDiv{
@@ -115,37 +124,62 @@ h1{
 
 .footer{
     height:30px;
-    background-color: rgba(223, 116, 55, 0.925);
+    background-image: linear-gradient(135deg, rgba(223, 116, 55, 1), rgb(231, 189, 155));
 }
 
 .itemDiv{
     display: flex;
     flex-direction: column;
-    border: 2px solid;
-    border-color: rgba(223, 116, 55, 0.925);
     justify-content: center;
     align-items: center;
     margin: 10px;
+    box-shadow: 0px 0px 15px 15px rgb(224, 183, 149) inset;
 }
 
 .itemDiv>img{
     height:300px;
     width:400px;
     margin: 5px;
+    opacity: 90%;
+    border-radius: 90%;
 }
 
 .detailsDiv{
     margin: 5px;
     font-size: 20px;
+    color: rgb(68, 43, 28);
 }
 
 .price{
     font-size: 20px;
     font-weight: 600;
     font-style: italic;
+    text-align: right;
+    display: block;
 }
 
 h2{
-    margin-top: 5px;
+    margin-top: 2px;
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+    color: rgba(68, 43, 28, 1);
+}
+
+h3{
+    font-size: 25px;
+    font-weight:600;
+    font-style: italic;
+    margin-top: 0px;
+}
+
+h4, p{
+    margin-bottom:0px;
+    margin-top: 0px;
+    margin-right: 20px;
+    display: inline;
+}
+
+h4{
     font-style: italic;
 }
