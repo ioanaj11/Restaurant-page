@@ -1,50 +1,52 @@
+import{mainDishMenu} from './menu.js';
+import {startersMenu} from './menu.js';
+import {dessertsMenu} from './menu.js';
+
 function LoadMenu(){
     const container=document.getElementById('content');
 
     const mainDiv=document.createElement('div');
     mainDiv.classList.add('mainDiv');
+    container.appendChild(mainDiv);
 
-    let menu=[{
-        Name: 'Sarmale',
-        Description: "Romanian stuffed cabbage rolls traditionally served on Christmas and New Year's Eve but also served throughout the year at weddings, baptism parties, and other large celebrations.",
-        Ingredients: 'vegetable oil, onion, rice, ground pork, cabbage leaves, bacon, tomato juice',
-        Weight: '300gr',
-        'No of calories': '560 kcal',
-        Price: '20 lei',
-        image: 'c69071597fdd147d8401.jpg'
-    },
-        {   
-        Name: 'Sarmale',
-        Description: "Romanian stuffed cabbage rolls traditionally served on Christmas and New Year's Eve but also served throughout the year at weddings, baptism parties, and other large celebrations.",
-        Ingredients: 'vegetable oil, onion, rice, ground pork, cabbage leaves, bacon, tomato juice',
-        Weight: '300gr',
-        'No of calories': '560 kcal',
-        Price: '20 lei',
-        image: 'c69071597fdd147d8401.jpg'
-        },
-        {
-        Name: 'Sarmale',
-        Description: "Romanian stuffed cabbage rolls traditionally served on Christmas and New Year's Eve but also served throughout the year at weddings, baptism parties, and other large celebrations.",
-        Ingredients: 'vegetable oil, onion, rice, ground pork, cabbage leaves, bacon, tomato juice',
-        Weight: '300gr',
-        'No of calories': '560 kcal',
-        Price: '20 lei',
-        image: 'c69071597fdd147d8401.jpg'
-        },
-        {
-            Name: 'Sarmale',
-            Description: "Romanian stuffed cabbage rolls traditionally served on Christmas and New Year's Eve but also served throughout the year at weddings, baptism parties, and other large celebrations.",
-            Ingredients: 'vegetable oil, onion, rice, ground pork, cabbage leaves, bacon, tomato juice',
-            Weight: '300gr',
-            'No of calories': '560 kcal',
-            Price: '20 lei',
-            image: 'c69071597fdd147d8401.jpg'
-            }]
+    const starterDishesTitle=document.createElement('h2');
+    starterDishesTitle.textContent='Starters:';
+    mainDiv.appendChild(starterDishesTitle);
+    
+    const startersMenuDiv=document.createElement('div');
+    startersMenuDiv.appendChild(displayMenuContent(startersMenu));
 
+    mainDiv.appendChild(startersMenuDiv);
+
+    const mainDishesTitle=document.createElement('h2');
+    mainDishesTitle.textContent='Main dishes:';
+    mainDiv.appendChild(mainDishesTitle);
+
+    const mainDishDiv=document.createElement('div');
+    mainDishDiv.appendChild(displayMenuContent(mainDishMenu));
+
+    mainDiv.appendChild(mainDishDiv);
+
+    const dessertsTitle=document.createElement('h2');
+    dessertsTitle.textContent="Desserts:";
+    mainDiv.appendChild(dessertsTitle);
+    
+    const dessertsDiv=document.createElement('div');
+    dessertsDiv.appendChild(displayMenuContent(dessertsMenu));
+
+    mainDiv.appendChild(dessertsDiv);
+    
+    container.appendChild(mainDiv);
+
+
+function displayMenuContent(menu){
+    const divTodisplay=document.createElement('div');
+    divTodisplay.classList.add('menuDisplay');
+    
     for(let i=0; i<menu.length; i++){
         const itemDiv=document.createElement('div');
         itemDiv.classList.add('itemDiv');
-        
+
         const itemImg=document.createElement('img');
         itemImg.setAttribute('src', `${menu[i].image}`);
 
@@ -80,18 +82,21 @@ function LoadMenu(){
                 case 'Price':
                     const price=document.createElement('p');
                     price.classList.add('price');
-                   
+
                     price.textContent=`${prop}:  ${menu[i][prop]}`;
 
                     detailsDiv.appendChild(price);
             }
         }
 
-        itemDiv.appendChild(detailsDiv);
-        mainDiv.appendChild(itemDiv);
+    itemDiv.appendChild(detailsDiv);
+    divTodisplay.appendChild(itemDiv);
     }
 
-    container.appendChild(mainDiv);
+    return divTodisplay;
 }
+} 
+    
+
 
 export {LoadMenu};

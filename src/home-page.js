@@ -38,9 +38,9 @@ function LoadLogo(){
     main.appendChild(logoDiv);
 }
 
-function LoadMainDiv(){
-    const mainDiv=document.createElement('div');
-    mainDiv.classList.add('mainDiv');
+function LoadDescriptionDiv(){
+    const mainDescriptionDiv=document.createElement('div');
+    mainDescriptionDiv.classList.add('mainDescriptionDiv');
 
     const descriptionDiv=document.createElement('div');
     descriptionDiv.classList.add('descriptionDiv');
@@ -50,7 +50,7 @@ function LoadMainDiv(){
    
     descriptionDiv.appendChild(description);
     
-    mainDiv.appendChild(descriptionDiv);
+    mainDescriptionDiv.appendChild(descriptionDiv);
 
     const mainImgDiv=document.createElement('div');
     mainImgDiv.classList.add('mainImgDiv');
@@ -60,8 +60,13 @@ function LoadMainDiv(){
     mainImg.setAttribute('src', './c3f5555faef4a83386b0.webp');
 
     mainImgDiv.appendChild(mainImg);
-    mainDiv.appendChild(mainImgDiv);
+    mainDescriptionDiv.appendChild(mainImgDiv);
     
+    const mainDiv=document.createElement('div');
+    mainDiv.classList.add('mainDiv');
+
+    mainDiv.appendChild(mainDescriptionDiv);
+   
     main.appendChild(mainDiv);
 
     const timetableDiv=document.createElement('div');
@@ -75,9 +80,10 @@ function LoadMainDiv(){
 
     timetableDiv.appendChild(timetable1);
     timetableDiv.appendChild(timetable2);
+    
+    mainDescriptionDiv.appendChild(timetableDiv);
 
-    mainDiv.appendChild(timetableDiv);
-}
+    }
 
 function LoadFooter(){
     const footer=document.createElement('div');
@@ -89,12 +95,12 @@ function LoadFooter(){
 function LoadHomePage(){
     LoadHeader();
     LoadLogo();
-    LoadMainDiv();
+    LoadDescriptionDiv();
     LoadFooter();
 }
 
 export{LoadHeader};
 export{LoadLogo};
-export{LoadMainDiv};
+export{LoadDescriptionDiv};
 export{LoadFooter};
 export{LoadHomePage};
