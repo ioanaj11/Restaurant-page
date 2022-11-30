@@ -16,6 +16,7 @@ function LoadHeader(){
         const tab=document.createElement('li');
         const tabBtn=document.createElement('button');
         tabBtn.textContent=`${tabsMenu[i]}`;
+        tabBtn.classList.add(`${tabsMenu[i]}`);
 
         tab.appendChild(tabBtn);
         tabsList.appendChild(tab);
@@ -24,6 +25,9 @@ function LoadHeader(){
     header.appendChild(tabsList);
 
     main.appendChild(header);
+
+    const homeBtn=document.querySelector('.header>ul>li').firstChild;
+    homeBtn.classList.add('Home','activeButton');
 }
 
 function LoadLogo(){
@@ -88,6 +92,11 @@ function LoadDescriptionDiv(){
 function LoadFooter(){
     const footer=document.createElement('div');
     footer.classList.add('footer');
+
+    const message=document.createElement('p');
+    message.textContent='Thank you for being part of our journey!';
+
+    footer.appendChild(message);
 
     main.appendChild(footer);
 }
