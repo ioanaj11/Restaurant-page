@@ -222,20 +222,28 @@ h4{
 
 .contactMainDiv{
     display:flex;
-}
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 210px;
+    margin-top: 100px;
+   }
 
 .contactDetailsDiv{
     display:grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 9fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    border: 2px dotted;
+    border-radius: 5px;
+    padding:40px;
+    gap:10px;
+    font-size: 25px;
+    font-family: 'Pacifico', cursive;
+    justify-content: center;
+    align-items: center;
 }
 
 .contactDetailsDiv>img{
-    height: 20px;
-    width:20px;
-}
-
-#map{
-    height:400px;
-    width:100%;
+    height: 30px;
+    width:30px;
 }
